@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Casita Restaurants</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+</head>
+<body>
+
+    <font face = "Comic sans MS" size =" 5">
+    <div class="container mt-3">
+        <div class="row mb-3">
+            <div class="col">
+                <h1>La Casita's Menu and pricing</h1>
+                <h4>La casita is located in central phoenix, and is home of the "Best Mexican Food "in Arizona, according to New York Times.</h4>
+                <h5>By updating the menu item you help us keep getting inspired and bettering our menu for our valuable customers.Thank you.</h5>
+            </div>
+            <div class="col">
+                <button class="btn btn-success float-end" onClick="openEditDishModal()">Create</button>
+             </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Type</th>
+                            <th>Price</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="dishes-container"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<div class="modal" tabindex="-1" id="edit-dish-modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="edit-dish-modal-title">Edit Dish</h5>
+                <button type="button" class="btn-close" data-bs-dismiss= "modal" arai-label="close"></button>
+             </div>
+             <div class="modal-body">
+                 <form class="form">
+                     <div class="mb-3">
+                         <label for="dish-name-input" class="form label">Name</label>
+                         <input type="text" class="form-control" id="dish-name-input">
+                     </div>
+                     <div class="mb-3">
+                         <label for="dish-type-input" class="form-control">Type</label>
+                             <select class="form-select" id="dish-name-input">
+                             <option value="Main">Main</option>
+                             <option value="Side">Side</option>
+                             <option value="Dessert">Dessert</option>
+                           </select>
+                     </div>
+                     <div class="mb-3">
+                         <label for="dish-price-input" class="form-label">Price</label>
+                         <input type="number" class="form-control" id="dish-price-input">
+                     </div>
+                 </form>
+             </div>
+             <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="number" class="btn btn-primary" onclick="saveEditDishModal()">Save Changes</button>
+             </div>
+        </div>
+    </div>
+</div>
+</font><br />
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+<script src="Recipes.js"></script> 
+<script src="Recipes.css"></script>
+</body>
+</html>
